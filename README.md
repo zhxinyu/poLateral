@@ -20,7 +20,7 @@ Action:
   
 - deposit (supply): A LP deposits a certain amount of token (FIL) to the pool. For now, we support token WFIL. In return, the LP would receive 1-to-1 amount of sFIL (staked FIL) token. Depositor also earn interests as the tokens are supplied into the pool. 
   
-- underwrite: A borrower can submit a request to borrow FIL token as a collateral. The borrower need to specific amount to be borrowed. The protocol will automatically calculate interest rates based on on-chain information from the borrower such as slash rate, length of operation, storage capacity. The borrower needs to provide collateral (could be any other tokens) in order to borrow FIL token. If borrowed successfully, the Pool contract generates a LoanAgent contract which serves as the owner and beneficiary of the miner actor. 
+- underwrite: A borrower can submit a request to borrow FIL token as a collateral. The borrower needs to specific amount to be borrowed. The protocol will automatically calculate interest rates based on on-chain information from the borrower such as slash rate, length of operation and storage capacity. The borrower needs to provide collateral (could be any other tokens, we could also add in-contract swap call in order to exchange for FIL tokens if necessary) in order to borrow FIL token. If borrowed successfully, the Pool contract generates a LoanAgent contract which serves as the owner and beneficiary of the miner actor. 
 
 - activate: start the LoanAgent and begin to provide storage services. 
 
