@@ -16,14 +16,6 @@ library SupplyLogic {
 
   using ReserveLogic for DataTypes.ReserveData;
 
-
-  /**
-   * @notice Implements the supply feature. Through `underwrite()`, users borrow assets from the protocol.
-   * @dev In the first supply action, `ReserveUsedAsCollateralEnabled()` is emitted, if the asset can be enabled as
-   * collateral.
-   * @param reservesData The state of all the reserves
-   * @param params The additional parameters needed to execute the supply function
-   */
   function executeUnderwrite(
     mapping(address => DataTypes.ReserveData) storage reservesData,
     DataTypes.ExecuteUnderwriteParams memory params
@@ -38,13 +30,6 @@ library SupplyLogic {
 
   }
 
-  /**
-   * @notice Implements the supply feature. Through `supply()`, users supply assets to the protocol.
-   * @dev In the first supply action, `ReserveUsedAsCollateralEnabled()` is emitted, if the asset can be enabled as
-   * collateral.
-   * @param reservesData The state of all the reserves
-   * @param params The additional parameters needed to execute the supply function
-   */
   function executeSupply(
     mapping(address => DataTypes.ReserveData) storage reservesData,
     DataTypes.ExecuteSupplyParams memory params
@@ -61,13 +46,7 @@ library SupplyLogic {
 
   }
 
-/**
-   * @notice Implements the withdraw feature. Through `withdraw()`, users redeem their sFILs for the underlying asset
-   * previously supplied in the protocol.
-   * @param reservesData The state of all the reserves
-   * @param params The additional parameters needed to execute the withdraw function
-   * @return The actual amount withdrawn
-   */
+
   function executeWithdraw(
     mapping(address => DataTypes.ReserveData) storage reservesData,
     DataTypes.ExecuteWithdrawParams memory params

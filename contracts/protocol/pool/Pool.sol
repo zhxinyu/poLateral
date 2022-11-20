@@ -82,7 +82,6 @@ contract Pool is PoolStorage, IPool {
 
     /**
      * @dev Constructor.
-     * @param provider The address of the PoolAddressesProvider contract
      */
     constructor(address provider) {
         poolOwner = provider;
@@ -102,7 +101,6 @@ contract Pool is PoolStorage, IPool {
         _reserves[FILAddress].sFILAddress = sFILAddress;
     }
 
-    /// @inheritdoc IPool
     function supply(
         address asset,
         uint256 amount,
@@ -115,11 +113,10 @@ contract Pool is PoolStorage, IPool {
                 asset: asset,
                 amount: amount,
                 onBehalfOf: onBehalfOf
-            })
+
         );
     }
 
-    /// @inheritdoc IPool
     function withdraw(
         address asset,
         uint256 amount,

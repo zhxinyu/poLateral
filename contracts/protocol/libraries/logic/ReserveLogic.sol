@@ -29,7 +29,6 @@ library ReserveLogic {
   function _updateIndexes(
     DataTypes.ReserveData storage reserve
   ) internal {
-    //solium-disable-next-line
     reserve.lastUpdateTimestamp = uint40(block.timestamp);
 
   }
