@@ -51,6 +51,13 @@ Action:
     2. withdraw
     3. WFIL swap
 
+### Contract address
+
+- Pool: 0xEe8470960EB3b01cc7c68ddc337c9fDF75cF8882
+- WFIL: 0xb4C851a1E4bA5195da3F7cbf2CE381F0a9d28cEC
+- sFIL: 0x0E5a82DC378439188d64ffa2455F7bd6a298e38B
+- MinerAPI: 0x1c9F963BcEc64585B9da8512A8965bAa7e518BA3
+- MarketAPI: 0xBce116D886D1DF284bf3e610F8FE6fA59886B901
 
 ### Reference
 - https://fvm-forum.filecoin.io/t/lending-pool-cookbook/114
