@@ -1,0 +1,38 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/tokenization/WFIL.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.10;\n\nimport {IWFIL} from '../interfaces/IWFIL.sol';\n\ncontract WFIL is IWFIL {\n\n    string public name = 'Wrapped FIL';\n    string public symbol = 'WFIL';\n    uint8 public decimals = 18;\n\n    mapping (address => uint256) balances;\n\n    function deposit() public payable {\n        balances[msg.sender] += msg.value;\n    }\n\n    function withdraw(uint256 wad) public {\n      require(balances[msg.sender] >= wad);\n      balances[msg.sender] -= wad;\n      payable(msg.sender).transfer(wad);\n    }\n\n    function transferFrom(address to, uint256 amount) public returns(bool) {\n      require(balances[msg.sender] >= amount);\n      balances[msg.sender] -= amount;\n      balances[to] += amount;\n      return true;\n    }\n\n    function balanceOf(address addr) public view returns(uint256) {\n      return balances[addr];\n    }\n\n}"
+    },
+    "contracts/interfaces/IWFIL.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.10;\n\ninterface IWFIL {\n\n  function transferFrom(address to, uint256 amount) external returns(bool);\n}"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
