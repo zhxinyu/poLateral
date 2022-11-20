@@ -1,4 +1,4 @@
-# poolingColateral
+# poLateral
 
 ## Introduction
 poLateral is an open-source liquidity protocol to provide FIL collaterals as a loan for storage providers (SPs). The main object of the protocol is a lending pool in which liquidity providers can supply FIL assets and storage providers can borrow a designated amount for the collateral needs in providing computer storage. The smart contract will lock the future income until the SPs have repaid their loan. 
