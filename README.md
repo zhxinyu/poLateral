@@ -1,6 +1,8 @@
+<img src="./bridge.jpeg" width="200">
+
 # poLateral
 
-[link](https://ethglobal.com/showcase/polateral-88ipp)
+Hack FEVM [link](https://ethglobal.com/showcase/polateral-88ipp)
 
 ## Introduction
 poLateral is an open-source liquidity protocol to provide Filecoin (FIL) collaterals as a loan for storage providers (SPs). The main object of the protocol is a lending pool in which liquidity providers (LPs) can supply FIL assets (other ERC-20 tokens are allowed via in-contract swap in the future) and storage providers can borrow a designated amount based on pledging and collateral requirements in offering computer storage services. The smart contract backing such a protocol will retain revenues from storage services and distribute them back to SP until the loan is paid off. During staking periods, the smart contract will also dispense interest incomes and repayment to LPs.
