@@ -56,10 +56,8 @@ Action:
 - LP:
     1. Deposit tokens
     2. Withdraw
-
-Withdraw tokens immediately with reduced interest incomes.
-
-    3. Atomic swap-and-deposit action.
+    3. Withdraw tokens immediately with reduced interest incomes.
+    4. Atomic swap-and-deposit action.
     
 ## How it's Made
 
